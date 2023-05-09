@@ -1,0 +1,25 @@
+﻿@model BlogApp.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Blog</h2>
+
+<div>
+	<hr />
+	<div>
+		<h3>@Html.DisplayFor(model => model.BlogHeading)</h3>
+	</div>
+	
+	<hr />
+
+	<div>
+		<p>@Html.DisplayFor(model => model.BlogContent)</p>
+	</div>
+</div>
+<hr />
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BlogId }) |
+    @Html.ActionLink("Back to Index", "Index")
+</p>
